@@ -18,7 +18,8 @@ public class Sample {
 
         /*    1秒間隔でI2Cデバイスから受信したデータを表示    */
         while (true) {
-            System.out.println("受信データ:" + String.valueOf(arduinoMega.read()));
+            System.out.println("writing");
+            arduinoMega.write(1);
             Thread.sleep(1000);
         }
         

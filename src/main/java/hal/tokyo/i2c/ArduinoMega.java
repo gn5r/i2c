@@ -20,10 +20,10 @@ public class ArduinoMega {
     /*    I2C通信用のグローバル変数    */
     private I2CBus bus;
     private I2CDevice device;
-    
+
     /*    スレーブレジスタアドレス    */
     private int addr;
-    
+
     /*    コンストラクタ    */
     public ArduinoMega() throws I2CFactory.UnsupportedBusNumberException, IOException {
         this(0x20);
@@ -42,4 +42,10 @@ public class ArduinoMega {
     public int read() throws IOException {
         return this.device.read();
     }
+
+    /*    write to slave    */
+    public void write(int data) throws IOException {
+        this.device.write((byte) data);
+    }
+
 }
