@@ -19,11 +19,10 @@ public class Sample {
         /*    Addressを表示    */
         arduinoMega.getAddress();
 
+        /*    1秒間隔でI2Cデバイスから受信したデータを表示    */
         while (true) {
-            if (arduinoMega.read() != -1) {
-                System.out.println(String.valueOf(arduinoMega.read()));
-                break;
-            }
+            System.out.println(String.valueOf(arduinoMega.read()));
+            Thread.sleep(1000);
         }
     }
 }
