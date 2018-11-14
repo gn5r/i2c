@@ -18,7 +18,7 @@ IP Addressとデバイス名の一覧が出るかと思いますので、**Raspb
 
 2. CmderまたはTeraTermを起動。<br>
 Cmderではコマンドで`ssh pi@先程見つけたIP Address`と打ち込んでください。<br>
-警告メッセージが出ますが、**yes** と打ち込むとパスワードを聞かれるので、**rapsberry** と入力すると、sshログインできます。
+警告メッセージが出ますが、**yes** と打ち込むとパスワードを聞かれるので、**raspberry** と入力すると、sshログインできます。
 
 # サンプルプログラムの動かし方
 ArduinoMegaとRaspberry Piとを指定のピンでつなぎ終わったら、sshログインしたターミナルで`sudo i2cdetect -y 1`を実行。<br>
