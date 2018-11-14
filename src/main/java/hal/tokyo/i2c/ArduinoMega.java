@@ -25,12 +25,12 @@ public class ArduinoMega {
     private int addr;
     
     /*    コンストラクタ    */
-    public ArduinoMega(int addr) throws I2CFactory.UnsupportedBusNumberException, IOException {
-        this.addr = addr;
+    public ArduinoMega() throws I2CFactory.UnsupportedBusNumberException, IOException {
+        this(0x20);
     }
 
     /*    privateコンストラクタ    */
-    private ArduinoMega() throws I2CFactory.UnsupportedBusNumberException, IOException {
+    private ArduinoMega(int addr) throws I2CFactory.UnsupportedBusNumberException, IOException {
         /*     ラズパイのI2C_BUS1に接続したと仮定    */
         this.bus = I2CFactory.getInstance(I2CBus.BUS_1);
 

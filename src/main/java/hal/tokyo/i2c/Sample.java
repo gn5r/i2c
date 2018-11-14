@@ -10,15 +10,15 @@ package hal.tokyo.i2c;
  * @author gn5r
  */
 public class Sample {
-
+    
     public static void main(String[] args) throws Exception {
 
         /*    ArduinoMegaクラスのインスタンスを生成    */
-        ArduinoMega arduinoMega = new ArduinoMega(0x20);
+        ArduinoMega arduinoMega = new ArduinoMega();
 
         /*    1秒間隔でI2Cデバイスから受信したデータを表示    */
         while (true) {
-            System.out.println(String.valueOf(arduinoMega.read()));
+            System.out.println("受信データ:" + String.valueOf(arduinoMega.read()));
             Thread.sleep(1000);
         }
         
